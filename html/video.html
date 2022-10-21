@@ -1,0 +1,21 @@
+<html lang="en" >
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="../css/video.css">
+    <title>Video Player</title>
+</head>
+<body class="videoDiv"  ng-app="videoApp" ng-controller="VideoController">
+    <div class="embed-responsive embed-responsive-16by9">
+        <iframe id="video" width="420" height="315" src="{{videoSource}}" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <h2 ng-bind="{{titleDisplay}}"></h2>
+    <p   ng-bind="{{videoDescription}}"></p>
+    <script type="text/javascript">
+        var videoSource = "https://www.youtube.com/embed/9B7te184ZpQ?rel=0";
+        var titleDisplay = "StarlightScamper";
+        var videoDescription= "Starlight Scamper: a project built for Lynda.com course";
+    </script>
+   <!-- <script src="../js/video.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,19 @@
+.header {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%; 
+   
+ }
+
+ /* @media (min-width: 992px){
+.navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+    flex: 1;
+    margin: auto;
+}
+ } */
+
+ 

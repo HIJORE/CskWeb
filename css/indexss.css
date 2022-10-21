@@ -1,0 +1,180 @@
+.card
+{
+    border-radius: 8px;
+    background: #fff;
+    padding: 1px;
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 18%);
+}
+
+
+.services img
+{
+   width:100%;
+   height: auto;
+   -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    border-radius: 3px;
+}
+
+p{
+    font-size: 14px;
+}
+
+
+/* Zoom Out #2 */
+ 
+ .services:hover img {
+	width: 90%;
+}
+
+.finddata
+{
+    height: 100px;
+    flex: 0 0 100px;
+    text-align: center;
+    display: block;
+}
+
+.coverdata img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #d69f19;
+    
+}
+
+
+.allcenter
+{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.container .flip
+{
+    max-width: 300px;
+    height: 215px;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    transition: 0.3s ease-in-out;
+}
+.container .flip:hover
+{
+    height: 450px;
+}
+.container .flip .imgContainer
+{
+    position: relative;
+    width:250px;
+    height:250px;
+    top:-50px;
+    left:10px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+.container .flip .imgContainer img
+{
+    max-width: 100%;
+    border-radius: 4px;
+}
+.container .flip .content
+{
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color:#111;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s ease-in-out;
+}
+.container .flip:hover .content
+{
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+
+@media (max-width: 330px){
+    .container .flip .imgContainer{
+        left: -2px;
+    }
+}
+
+
+@media only screen and (max-width: 600px) {
+    .services img
+    {
+       width:100%;
+       height: auto;
+       border-radius: 8px;
+       -webkit-transition: .3s ease-in-out;
+        transition: .3s ease-in-out;
+    }
+  }
+
+  .yellow-love {
+    position: relative;
+    padding: 5% 0%;
+    text-align: center;
+}
+  
+  .yellow-love .container-fluid {
+    padding: 2% 7%;
+    background-image: url(../assets/images/yellove-wall.png);
+    object-fit: cover;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.yellow-love .container-fluid .sticker-img img {
+    min-width: 150px;
+    max-width: 600px;
+    min-height: 150px;
+    max-height: 600px;
+    margin-bottom: -15%;
+    margin-left: -15%;
+    height: auto;
+    width: 600px;
+}
+
+.yellow-love .container-fluid .layer-img img {
+    height: auto;
+    width: 90%;
+    min-width: 150px;
+    max-width: 500px;
+    min-height: 150px;
+    max-height: 500px;
+}
+
+
+
+.yellow-data {
+    position: relative;
+    padding: 5% 0%;
+    text-align: center;
+}
+  
+  .yellow-data .container-fluid {
+    padding: 2% 7%;
+    background-color: #f0c102;
+    object-fit: cover;
+}
+
+.carousel-inner
+{
+    border-radius: 18px !important;
+}

@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="stylesheet" href="../assets/plugins/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/index.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  
+
+  <title>My app</title>
+
+  
+</head>
+
+<body ng-app="myApp" ng-controller="imgCtr1">
+
+
+
+<!-- first four cards -->
+  <p id="header"></p>
+  <div class="container" ng-controller="imgCtr1" style="background-color:#fff">
+
+    <div class="row mt-5" >
+      <div class="col-md-3 mb-4" ng-repeat="img in images1">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-6 col-12 pt-1">
+                <img ng-src="{{img.imgPath}}" style="height:100%;" class="img-fluid rounded-start mt-1 mb-1" alt="...">
+              </div>
+              <div class="col-md-6 col-12">
+                <p class="mt-1 mb-1" style="font-size: 13px;">{{img.content}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+<!-- second four cards -->
+    <div class="row mt-5">
+      <div class="col-md-3 mb-4" ng-repeat="img in images1">
+        <div class="card h-100">
+          <div class="card-body">
+            <div class="row">
+              <img ng-src="{{img.imgPath}}" class="card-img-top" alt="..." style="height:400px">
+            </div>
+            <div class="row">
+              <p>{{img.content}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+     
+  <!-- third three cards -->
+    <div class="row mt-5">
+      <div class="col-md-4 mb-4" ng-repeat="img in images2">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <img ng-src="{{img.imgPath}}" class="card-img-top" alt="..." style="height:400px">
+            </div>
+            <div class="row">
+              <p >{{img.content}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+     
+      
+    </div>
+
+    <!-- youtube videos -->
+    <div class="row mt-5" >
+      <div class="col-md-6  mb-5 d-flex justify-content-center" style="background-color:#0066b3 ;border-radius:10px 0px 0px 10px;" >
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FBYgBBRny3I"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div class="col-md-6  mb-5 d-flex justify-content-center" style="background-color:#0066b3 ;border-radius:0px 10px 10px 0px;">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/79MoV_vWZzU"  frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+   
+
+    <!-- csk logoes -->
+    <div class="row mt-5">
+      <div class="col-md-3 mb-3 d-flex justify-content-center" ng-repeat="csk in csklogos">
+         <img ng-src="{{csk.csklogo}}" alt="" style="width:100px" data-bs-target="#exampleModal" data-bs-toggle="modal">
+      </div>
+     </div>
+   <!-- csk video for hover -->
+    <div class="row" >
+      <div class="col-md-12 mt-5" >
+        <video id="vidCSK"  onmouseover="PlayVideo()" onmouseout="PauseVideo()"class="thevideo" loop style="width:100%;"  autoplay="" 
+        muted="muted">
+          <source src="../assets/images/csk vedio.mp4" type="video/mp4">
+          
+        </video>
+      </div>
+    </div>
+   
+     
+
+   <!-- modal -->
+    <div class="row mt-5">
+      <div class="col-md-4 offset-4">
+       
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+  
+  
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">java script</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                
+  
+  
+                <video id="modalVideo" controls="controls" poster="http://www.gossettmktg.com/video/dangot.png">
+                  <source src="http://www.gossettmktg.com/video/dangot.mp4" type="video/mp4">
+                  <source src="http://www.gossettmktg.com/video/dangot.webm" type="video/webm">
+                  <source src="http://www.gossettmktg.com/video/dangot.ogv" type="video/ogg">
+                  <object type="application/x-shockwave-flash"
+                    data="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf" width="200" height="190">
+                    <param name="movie" value="https://releases.flowplayer.org/swf/flowplayer-3.2.1.swf">
+                  
+                    <param name="flashVars"
+                      value="config={'playlist':['http%3A%2F%2Fwww.gossettmktg.com%2Fvideo%2Fdangot.png',{'url':'http%3A%2F%2Fwww.gossettmktg.com%2Fvideo%2Fdangot.mp4','autoPlay':false}]}">
+                    <img alt="Big Buck Bunny" src="http://www.gossettmktg.com/video/dangot.png" width="200" height="190"
+                      title="No video playback capabilities, please download the video below">
+                  </object>
+  
+                </video>
+              
+                <div class="modal-footer">
+                 
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+
+    <!-- academy container -->
+    <div class="row">
+      <div class="col-md-12">
+        <p style="font-size:52px;color:#0066b3">ACADEMIES</p>
+      </div>
+     
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-12" style="background-color:#eff1f2">
+         <div class="row">
+          <div class="col-md-4 d-flex justify-content-center">
+            <span><b style="color:#0066b3">SUPER KINGS ACADEMY, CHENNAI</b>
+             Based in Thoraipakkam, Chennai, this is a centre with state-of-the-art facilities that includes outdoor and indoor nets, and flood lights. The facility has various types of pitches to suit your need: 14 Turf pitches, two concrete wickets, five indoor wickets apart from one open net. The facility includes a fitness centre, cafeteria and a lounge. One can also shop Super Kings merchandise at the store within the centre 361, Madha Koil St, Vivekananda Nagar, Thoraipakkam, Tamil Nadu 600097
+              For Admissions, register and contact : +91 7305322282</span>
+           
+          </div>
+          <div class="col-md-4 d-flex justify-content-center">
+            <img src="../assets/images/tn map.png" alt="">
+          </div>
+          <div class="col-md-4 d-flex justify-content-center">
+            <span><b style="color:#0066b3">SUPER KINGS ACADEMY, SALEM</b>
+              The Salem Cricket Foundation is a stadium of international standards. A huge facility spread across 16 acres, the stadium has a main ground with five pitches, apart from 14 practice pitches, players' pavilion and flood lights. It is located off the Chennai-Salem highway and is approximately 25 km from Salem city. The Super Kings Academy will arrange buses for traveling to and from the ground. One can also shop Super Kings merchandise at the store within the centre.
+              Salem Cricket Foundation, Vazhapadi, Salem, Tamil Nadu 636115
+              For Admissions, register and contact : +91 7305422282</span>
+               
+          </div>
+         </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="footer"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+  <script src="../assets/plugins/bootstrap.bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="../assets/plugins/jquery-3.6.1.js"></script>
+  <script src="../js/index.js"></script>
+
+  <!-- script for modal -->
+  <script>
+
+function PlayVideo(){
+
+  let VideoPlayer = document.getElementById('vidCSK');
+     VideoPlayer.play();
+}
+function PauseVideo(){
+  let VideoPlayer = document.getElementById('vidCSK');
+     VideoPlayer.pause();
+}
+
+    var vid = document.getElementById("modalVideo");
+
+    function playVid() {
+      console.log(typeof vid);
+      vid.play();
+    }
+
+    function pauseVid() {
+      vid.pause();
+    } 
+  </script>
+
+ 
+  <script>
+    $(function () {
+      $("#header").load("header.html");
+      $(".footer").load("footer.html");
+    });
+  </script>
+
+
+</body>
+
+</html>
+
+
+ 
+
+
+
+
+
+
+
+ 
+
+  
+
+ 
+ 
+
+
+
+
+
+   

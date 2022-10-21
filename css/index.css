@@ -1,0 +1,17 @@
+
+#modalVideo{
+     width:450px;
+     height: 200px;
+   }
+   .card
+   {
+    
+   background:black;
+   
+   box-shadow:0 0 10px ;
+   }
+ 
+
+   .card img:hover{
+    background-color: black;
+   }
